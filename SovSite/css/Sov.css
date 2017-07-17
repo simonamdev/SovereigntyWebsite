@@ -1,0 +1,107 @@
+#background
+{
+	position:absolute;
+	background-position: center;
+	background-image: url("../assets/background2.png");
+	background-repeat: no-repeat;
+	background-color: black;
+	height: 100%;
+	width: 100%;
+	display: block;
+	left: 0;
+	top: 0;
+}
+#HomeVidFrame
+{
+	position: absolute;
+	left: -6px;
+	top: -6px;
+	height: 3200%;
+	Width: 5550%;
+}
+#Navigation
+{
+	position: absolute;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: block;
+}
+#StreamButton1
+{
+	position: absolute;
+	display: block;
+	left: 6.9%;
+	top: 64.1%;
+}
+#StreamButton2
+{
+	position: absolute;
+	display: block;
+	left: 17.2%;
+	top: 64.1%;
+}
+#StreamButton3
+{
+	position: absolute;
+	display: block;
+	left: 27.5%;
+	top: 64.1%;
+}
+#StreamButton4
+{
+	position: absolute;
+	display: block;
+	left: 62.4%;
+	top: 64.1%;
+}
+#StreamButton5
+{
+	position: absolute;
+	display: block;
+	left: 72.7%;
+	top: 64.1%;
+}
+#StreamButton6
+{
+	position: absolute;
+	display: block;
+	left: 83%;
+	top: 64.1%;
+}
+#VideoFrame
+{
+	position: absolute;
+	padding: 6px;
+	left: 29.45%;
+	top:10%;
+}
+
+#Video
+{
+	position: abolute;
+}
+#FillerImage
+{
+	position:absolute;
+}
+#Banner
+{
+	position: absolute;
+	width: 100%;
+	top: 60%;
+	left: 0;
+	display: block;
+}
+#FooterBanner
+{
+	position: absolute;
+	width: 100%;
+	top: 94%;
+	display: block;
+	left: 0;
+}
+Footer
+{
+	
+}
