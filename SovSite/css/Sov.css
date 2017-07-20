@@ -1,3 +1,7 @@
+body
+{
+	margin: 0;
+}
 #background
 {
 	position:absolute;
@@ -8,100 +12,262 @@
 	height: 100%;
 	width: 100%;
 	display: block;
-	left: 0;
-	top: 0;
 }
-#HomeVidFrame
+.topBanner
 {
-	position: absolute;
-	left: -6px;
-	top: -6px;
-	height: 3200%;
-	Width: 5550%;
+	height:66px;
+	width:100%;
+	position:fixed;
+}
+#NavBanner
+{
+	height:100%;
+	width:100%;
+	position:absolute;
 }
 #Navigation
 {
-	position: absolute;
-	width: 100%;
-	top: 0;
-	left: 0;
-	display: block;
+	height:50px;
+	width: 700px;
+	position:absolute;
 }
-#StreamButton1
+#Navigation ul 
 {
-	position: absolute;
-	display: block;
-	left: 6.9%;
-	top: 64.1%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
 }
-#StreamButton2
+#Navigation li
 {
-	position: absolute;
-	display: block;
-	left: 17.2%;
-	top: 64.1%;
+	float:left;
 }
-#StreamButton3
+#Navigation li a
 {
-	position: absolute;
 	display: block;
-	left: 27.5%;
-	top: 64.1%;
+	color: white;
+	text-align: center;
+	padding: 9px 16px;
+	text-decoration: none;
+	background-color: #8A7F72;
+	border-right: 1px solid #FFFFFF;
+	border-left: 1px solid #FFFFFF;
+	opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
 }
-#StreamButton4
+#Navigation li a:hover
 {
-	position: absolute;
-	display: block;
-	left: 62.4%;
-	top: 64.1%;
+	background-color: #70675D;
+	opacity: 1;
+	filter: alpha(opacity=100);
 }
-#StreamButton5
+.dropbtn li, a
 {
-	position: absolute;
-	display: block;
-	left: 72.7%;
-	top: 64.1%;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-#StreamButton6
+#Navigation li a:hover, .Communitydropdown:hover .dropbtn 
 {
-	position: absolute;
-	display: block;
-	left: 83%;
-	top: 64.1%;
+    background-color: red;
 }
-#VideoFrame
+#Navigation li.Communitydropdown 
 {
-	position: absolute;
-	padding: 6px;
-	left: 29.45%;
-	top:10%;
+    display: inline-block;
+}
+.Communitydropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7C7266;
+    min-width: 100px;
+	left: 77px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.Communitydropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.Communitydropdown-content a:hover 
+{
+	background-color: #8A7F72
+}
+.Communitydropdown:hover .Communitydropdown-content 
+{
+    display: block;
 }
 
+#Navigation li a:hover, .Streamersdropdown:hover .dropbtn 
+{
+    background-color: red;
+}
+#Navigation li.Streamersdropdown 
+{
+    display: inline-block;
+}
+.Streamersdropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #7C7266;
+    min-width: 100px;
+	left: 165px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.Streamersdropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.Streamersdropdown-content a:hover 
+{
+	background-color: #8A7F72
+}
+.Streamersdropdown:hover .Streamersdropdown-content 
+{
+    display: block;
+}
+
+
+.VideoFrame
+{
+	height:368px;
+	width:648px;
+	margin: auto;
+	top: 100px;
+	position:relative;
+}
+#HomeVidFrame
+{
+	height: 100%;
+	width: 100%;
+	position:absolute;
+}
 #Video
 {
-	position: abolute;
+	height:354px;
+	width:634px;
+	margin:auto;
+	top: 6px; left: 6px;
+	position:absolute;
 }
 #FillerImage
 {
+	height:100%;
+	width:100%;
+}
+#Unicorn
+{
+	height: 100%;
+	width: 100%;
+}
+
+.TwitterFeed
+{
+	height:200px;
+	width: 310px;
+	margin:auto;
+	position:relative;
+	left:500px;
+	bottom:235px;
+	display: block;
+}
+
+
+.SovBanner
+{
+	height: 125px;
+	width: 100%;
 	position:absolute;
+	bottom: 160px;
 }
 #Banner
 {
-	position: absolute;
+	height: 100%;
 	width: 100%;
-	top: 60%;
-	left: 0;
-	display: block;
+	position:absolute;
 }
-#FooterBanner
+.LinkToStreams
 {
-	position: absolute;
+	background-image: url(../assets/SovButton.png)	
+}
+.LinkToStreams:hover
+{
+	background-image: url(../assets/SovPressed.png)
+}
+.FooterBanner
+{
+	height: 47px;
 	width: 100%;
-	top: 94%;
-	display: block;
-	left: 0;
-}
-Footer
-{
+	bottom: 0;
+	position:fixed;
 	
 }
+#BottomBanner
+{
+	height: 100%;
+	width: 100%;
+	margin: auto;
+	position: absolute;
+   	bottom:0px;
+}
+#FooterButtons
+{
+	height: 100%;
+	width: 150px;
+    bottom: 10px;
+	position: absolute;
+	opacity: 0.2;
+}
+#FooterButtons ul 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+	overflow: hidden;
+}
+#FooterButtons li
+{
+	float: left;
+	width: 50px;
+	height: 50px;
+    padding: 10px;
+}
+#FooterButtons li a
+{
+	position: absolute;
+}
+.TeamSpeak
+{
+	height: 100%;
+	width: 100%;
+}
+.Youtube
+{
+	height: 100%;
+	width: 100%;
+}
+.Discord
+{
+	height: 100%;
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
