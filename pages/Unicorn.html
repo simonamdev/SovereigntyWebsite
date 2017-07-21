@@ -6,41 +6,25 @@
 		<link rel="icon" href="../assets/SovLogo.png" type="image/gif" sizes="596x596">
 		<meta charset="UTF-8">
 		<title>The Sovereignty</title>
-		<script  type="text/javascript">
-			function changeImg(imgNumber)
-			{
-				var newImgNumber =Math.floor(Math.random()*3);
-				document.body.style.backgroundImage = 'url(../communitybackgrounds/background'+newImgNumber+'.png)';
-			}
-			window.onload=changeImg;
-		</script>
 		
-		<style>
-			.bg
-			{
-				position: absolute;
-				background-position: center;
-				background-repeat: no-repeat;
-				background-color: aqua;
-				height: 100%;
-				width: 100%;
-			}
-		</style>
 	</head>
 	<script src="../js/copytext.js"></script>
+	<script src="../js/changeBackground.js"></script>
+	
+	<img id="background" src="https://pbs.twimg.com/profile_images/751168765191081988/3y6h5fRA_400x400.jpg"/>
 	
 	<body>
 		<div class="topBanner">
 			<img id="NavBanner" src="../assets/SovNavBanner.png"/>
-				<div id="Navigation">
+				<div id="LeftNavigation">
 					<ul>
   						<li><a class="active" href="../SovHome.html">Home</a></li>
   						<li class="Communitydropdown">
-  							<a class="active" href="../Forums.html">Community</a>
+  							<a class="active" href="../pages/Forums.html">Community</a>
   							<div class="Communitydropdown-content">
   								<a href="https://discord.gg/9aUPyFR">Discord</a>
   								<a onclick="copyToClipboard('TS')">Team Speak</a>
-  								<a href="#">Youtube</a>
+  								<a href="https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ">Youtube</a>
   							</div>
   						</li>
   						<li class="Streamersdropdown">
@@ -53,9 +37,17 @@
       							<a href="#">Inquisitors</a>
     						</div>
   						</li>
-  						<li><a class="active" href="../helpdesk.html">Help Desk</a></li>
+  						<li><a class="active" href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
   						<li><a class="active" href="../pages/Contact.html">Contact</a></li>
   						<li><a class="active" href="../pages/About.html">About</a></li>
+  						<!--<li><a class="active" href=""/a></li>-->
+					</ul> 
+				</div>
+				<div id="RightNavigation">
+					<ul>
+  						<li><a class="active" href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
+  						<li><a class="active" href="../pages/BGSDivision.html">B.G.S. Info</a></li>
+  						<li><a class="active" href="../pages/HomeFleet.html">Home Fleet</a></li>
   						<!--<li><a class="active" href=""/a></li>-->
 					</ul> 
 				</div>
