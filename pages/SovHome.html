@@ -18,6 +18,54 @@
 	<img id="background" src="https://pbs.twimg.com/profile_images/751168765191081988/3y6h5fRA_400x400.jpg"/>
 	
 	<body>
+		
+		<script>
+			var xhr = new XMLHttpRequest();
+			xhr.open('GET', "https://www.edsm.net/api-system-v1/factions?systemName=Sovereign's Reach", true);
+			xhr.send();
+			
+			xhr.onreadystatechange = processRequest;
+			
+			function processRequest(e)
+			{
+ 				if (xhr.readyState == 4 && xhr.status == 200)
+				{
+        			var response = JSON.parse(xhr.responseText);
+					for(x=0; x < response.factions.length; x++)
+					{
+						if(response.factions[x].name == "The Imperial Inquisition" || response.factions[x].name == "The Sovereignty")
+						{
+							alert(response.factions[x].name + " " + Number((response.factions[x].influence * 100).toFixed(2)) + " " + response.factions[x].state);
+						}	
+					}
+        			
+    			}
+			}
+		</script>
+			
+			
+		<div id="MainBody">
+			<div class="VideoFrame">
+				<img id="HomeVidFrame" src="../assets/HomeVideoFrame.png"/>
+				<div id="Video">
+					<img id="FillerImage" src="../assets/greatergood.gif"/>
+				</div>
+			</div>
+		</div>
+		<div id="socialandnews">
+			<div id="News">
+				
+			</div>
+			<div id="Events">
+				
+			</div>
+			<div id="Twitter">
+				<a class="twitter-timeline"  href="https://twitter.com/search?q=from%3ATIIQSovereignty%20OR%20from%3AGraemeOnTheSofa%20OR%20from%3Amalictolsen%20OR%20from%3Acmdrhughmann%20OR%20from%3Amarvindarkstone%20OR%20from%3AKhalebDaarke%20OR%20from%3AFulsamee%20OR%20from%3AMrfiendly" data-widget-id="891624588433424386"></a>
+            	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+			</div>
+		</div>
+		<div id="Space"></div>
+		
 		<div class="topBanner">
 			<img id="NavBanner" src="../assets/SovNavBanner.png"/>
 				<div id="LeftNavigation">
@@ -32,14 +80,7 @@
   							</div>
   						</li>
   						<li class="Streamersdropdown">
-    						<a href="../pages/Streamers.html" class="dropbtn">Streamers</a>
-    						<div class="Streamersdropdown-content">
-      							<a href="#">Lord Inquisitors</a>
-      							<a href="#">System Controllers</a>
-      							<a href="#">Arbiters</a>
-      							<a href="#">Zealots</a>
-      							<a href="#">Inquisitors</a>
-    						</div>
+    						<a href="../pages/Streamers.html">Streamers</a>
   						</li>
   						<li><a class="active" href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
   						<li><a class="active" href="../pages/Contact.html">Contact</a></li>
@@ -56,30 +97,8 @@
 					</ul> 
 				</div>
 		</div>
-			
-		<div class="VideoFrame">
-			<img id="HomeVidFrame" src="../assets/HomeVideoFrame.png"/>
-			
-			<div id="Video">
-				<img id="FillerImage" src="../assets/greatergood.gif"/>
-			</div>
-		</div>
-		<div class="TwitterFeed">
-			<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=from%3ATIIQSovereignty%20OR%20from%3AGraemeOnTheSofa%20OR%20from%3Amalictolsen%20OR%20from%3Acmdrhughmann%20OR%20from%3Amarvindarkstone%20OR%20from%3AKhalebDaarke%20OR%20from%3AFulsamee%20OR%20from%3AMrfiendly" data-widget-id="887452898975662082">Tweets from The Sovereignty</a>
-            
-            <script>
-				!function(d,s,id)
-				{
-					var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-					if(!d.getElementById(id))
-					{										       	 js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs)
-					}
-				}(document,"script","twitter-wjs");
-			</script>
-          
-          
-		</div>
-			
+		
+		
 		<!--<div class="SovBanner">
 			<img id="Banner" src="assets/SovHomeBanner.png">
 			

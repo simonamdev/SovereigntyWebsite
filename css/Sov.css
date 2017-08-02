@@ -4,10 +4,8 @@ body
 }
 #background
 {
-	position:absolute;
-	background-position: center;
+	position:fixed;
 	background-image: url("../assets/background2.png");
-	background-repeat: no-repeat;
 	background-color: black;
 	height: 100%;
 	width: 100%;
@@ -15,9 +13,10 @@ body
 }
 .topBanner
 {
-	height:66px;
+	height:9%;
 	width:100%;
-	position:fixed;
+	top: 0;
+	position:absolute;
 }
 #NavBanner
 {
@@ -27,10 +26,11 @@ body
 }
 #LeftNavigation
 {
-	height:38px;
-	width: 591px;
+	height:60%;
+	width: 48%;
 	position:absolute;
-	left: 0;
+	left: 0%;
+	top: 0%;
 }
 #LeftNavigation ul 
 {
@@ -48,7 +48,7 @@ body
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 8px 16px;
+	padding: 6px 16px;
 	text-decoration: none;
 	background-color: #8A7F72;
 	border-right: 1px solid #FFFFFF;
@@ -66,8 +66,8 @@ body
 
 #RightNavigation
 {
-	height:40px;
-	width: 329px;
+	height:60%;
+	width: 25%;
 	position:absolute;
 	right: 0;
 }
@@ -87,7 +87,7 @@ body
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 8px 16px;
+	padding: 6px 16px;
 	text-decoration: none;
 	background-color: #8A7F72;
 	border-right: 1px solid #FFFFFF;
@@ -177,13 +177,21 @@ body
     display: block;
 }
 
-
+#MainBody
+{
+	width: 98%;
+	height: 100%;
+	top: 10%;
+	left: 1%;
+	margin: auto;
+	position: absolute;
+}
 .VideoFrame
 {
-	height:368px;
-	width:648px;
+	height:60%;
+	width:50%;
 	margin: auto;
-	top: 100px;
+	top: 10%;
 	position:relative;
 }
 #HomeVidFrame
@@ -191,44 +199,76 @@ body
 	height: 100%;
 	width: 100%;
 	position:absolute;
+    border-radius: 25px;
 }
 #Video
 {
-	height:354px;
-	width:634px;
-	margin:auto;
-	top: 6px; left: 6px;
-	position:absolute;
+	height:97%;
+	width:97%;
+	top: 1.5%;
+	margin: auto;
+	position:relative;
 }
 #FillerImage
 {
 	height:100%;
 	width:100%;
+    border-radius: 25px;
 }
 #Unicorn
 {
 	height: 100%;
 	width: 100%;
 }
-
-.TwitterFeed
+#socialandnews
 {
-	height:200px;
-	width: 310px;
-	margin:auto;
-	position:relative;
-	left:500px;
-	bottom:235px;
-	display: block;
+	width: 98%;
+	height: 100%;
+	top: 110%;
+	left: 1%;
+	position: absolute;
+}
+#News
+{
+    border-radius: 25px;
+	height: 100%;
+	width: 33%;
+	background-color: azure;
+	position: absolute;
+}
+#Events
+{
+    border-radius: 25px;
+	height: 100%;
+	width: 33%;
+	left: 33.5%;
+	background-color: azure;
+	position: absolute;
+}
+#Twitter
+{
+    border-radius: 25px;
+	height: 100%;
+	width: 33%;
+	right: 0;
+	background-color: azure;
+	position: absolute;
 }
 
-
-.SovBanner
+.twitter-timeline
 {
-	height: 125px;
+    border-radius: 25px;
+	height:100%;
+	width:100%;
+	position: absolute;
+}
+#Space
+{
+	height: 10%;
 	width: 100%;
-	position:absolute;
-	bottom: 160px;
+	top: 210%;
+	position: absolute;
+	
 }
 #Banner
 {
@@ -246,7 +286,7 @@ body
 }
 .FooterBanner
 {
-	height: 47px;
+	height: 7%;
 	width: 100%;
 	bottom: 0;
 	position:fixed;
@@ -258,13 +298,13 @@ body
 	width: 100%;
 	margin: auto;
 	position: absolute;
-   	bottom:0px;
+   	bottom:0;
 }
 #FooterButtons
 {
 	height: 100%;
-	width: 150px;
-    bottom: 10px;
+	width: 11.5%;
+    bottom: 20%;
 	position: absolute;
 	opacity: 0.2;
 }
@@ -278,9 +318,9 @@ body
 #FooterButtons li
 {
 	float: left;
-	width: 50px;
-	height: 50px;
-    padding: 10px;
+	width: 30%;
+	height: 30%;
+    padding: 6%;
 }
 #FooterButtons li a
 {
@@ -300,6 +340,205 @@ body
 {
 	height: 100%;
 	width: 100%;
+}
+.Streams
+{
+	background-color: #1F1F1F;
+	margin: auto;
+	height: 80%;
+	width: 99%;
+	position: absolute;
+	top: 80px;
+	left: 0.5%;
+}
+#StreamFeed
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+#Streamer
+{
+	top: 1.3%;
+	left: 0.5%;
+	height: 87%;
+	width: 75%;
+	position: absolute;
+	background-color: #171717;
+}
+#Chat
+{
+	right: 0.5%;
+	top: 1.3%;
+	height: 97.3%;
+	width: 23.4%;
+	position: absolute;
+	background-color: #171717;
+}
+#StreamInfo
+{
+	bottom: 1.3%;
+	left: 0.5%;
+	position: absolute;
+	height: 9%;
+	width: 50%;
+	background-color: #171717;
+}
+#TwitchFollow
+{
+	bottom: 1.3%;
+	position: absolute;
+	height: 9%;
+	width: 24.5%;
+	right: 24.5%;
+	background-color: #171717;
+}
+#OtherStreams
+{
+	background-color: #1A1A1A;
+	position: relative;
+	height: 200%;
+	width: 100%;
+	margin: auto;
+	top: 100%;
+}
+.paigination
+{
+	bottom: 5%;
+	left: 23%;
+	position: absolute;
+}
+#column1
+{
+	position: absolute;
+	width: 32%;
+	height: 88%;
+	left: 1%;
+	top: 1.5%;
+	background-color: #222222;
+}
+#column2
+{
+	position: absolute;
+	width: 32%;
+	height: 88%;
+	left: 34%;
+	top: 1.5%;
+	background-color: #222222;
+}
+#column3
+{
+	position: absolute;
+	width: 32%;
+	height: 88%;
+	right: 1%;
+	top: 1.5%;
+	background-color: #222222;
+}
+#Frame
+{
+	width: 96%;
+	height: 5%;
+	left: 2%;
+	top: 1%;
+	position: absolute;
+	background-color: #262626;
+	
+}
+#LIFrame
+{
+	width: 15%;
+	height: 25%;
+	position: absolute;
+	background-color:#242424;
+}
+#LIPhoto
+{
+	width: 100%;
+	height: 90%;
+	position: absolute;
+}
+#LILiveStatus
+{
+	height: 10%;
+	width: 10%;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	background-color:#242424;
+}
+#LIStreamerInfo
+{
+	position: absolute;
+	width: 80%;
+	height: 10%;
+	bottom: 0;
+	right: 0;
+}
+.LIStreamerName
+{
+	position: absolute;
+	right: 0;
+	bottom: 10%;
+	padding: 0;
+	background-color:#242424;
+}
+#Photo
+{
+	height: 90%;
+	width: 10%;
+	top: 5%;
+	left: 0.6%;
+	position: absolute;
+}
+#LiveStatus
+{
+	width: 5%;
+	height: 45%;
+	left: 12.7%;
+	top: 30%;
+	position: absolute;
+}
+#StreamerInfo
+{
+	width: 79%;
+	height: 90%;
+	top: 5%;
+	right: 0.6%;
+	position: absolute;
+}
+.StreamerName
+{
+	position: absolute;
+	padding: 0;
+	left: 0;
+	top: 20%;
+}
+#LiveButton
+{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+}
+#page1
+{
+	display: block;
+}
+#page2
+{
+	display:none;
+}
+#page3
+{
+	display:none;
+}
+#page4
+{
+	display:none;
+}
+#page5
+{
+	display:none;
 }
 
 

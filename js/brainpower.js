@@ -1,16 +1,20 @@
 // JavaScript Document
 
 var allowedKeys = {
-  37: 'left',
-  38: 'up',
-  39: 'right',
-  40: 'down',
+  66: 'b',
+  82: 'r',
   65: 'a',
-  66: 'b'
+  73: 'i',
+  78: 'n',
+  80: 'p',
+  79: 'o',
+  87: 'w',
+  69: 'e',
+  82: 'r'
 };
 
 // the 'official' Konami Code sequence
-var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+var konamiCode = ['b', 'r', 'a', 'i', 'n', 'p', 'o', 'w', 'e', 'r'];
 
 // a variable to remember the 'position' the user has reached so far.
 var konamiCodePosition = 0;
@@ -40,6 +44,6 @@ document.addEventListener('keydown', function(e) {
 
 function activateCheats() 
 {
-	alert("Delivering rainbows!");
-  	location.replace("../pages/Unicorn.html");
+	alert("O-oooooooooo AAAAE-A-A-I-A-U-JO-oooooooooooo AAE-O-A-A-U-U-A-E-eee-ee-eee AAAAE-A-E-I-E-A-JO-ooo-oo-oo-oo EEEEO-A-AAA-AAAA");
+  	document.getElementById('Unicorn').src = 'https://player.twitch.tv/?video=v158178904&autoplay=true';
 }
