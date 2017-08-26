@@ -4,139 +4,108 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../css/Sov.css">
 		<link rel="stylesheet" type="text/css" href="../css/w3.css">
-		<link rel="icon" href="assets/SovLogo.png" type="image/gif" sizes="596x596">
+		<link rel="icon" href="../assets/SovLogo.png" type="image/gif" sizes="596x596">
 		<meta charset="UTF-8">
 		<title>The Sovereignty</title>
 		
 	</head>
 	<script src="../js/copytext.js"></script>
-	<script src="../js/changeBackground.js"></script>
-	<script src="../js/malic.js"></script>
 	<script src="../js/changepage.js"></script>
 	<script src="../js/changeStreamer.js"></script>
-	<script src="../js/TwitchAPI.js"></script>
-	
-	
+	<script src="../js/SovStreamers.js"></script>
+	<script src="../js/changeBackground.js"></script>
+	<script src="../js/malic.js"></script>
 	
 	<!--<img id="background" src="communitybackgrounds/background1.png"/>-->
 	
 	<img id="background" src="https://pbs.twimg.com/profile_images/751168765191081988/3y6h5fRA_400x400.jpg"/>
 	
 	<body>
-		<div class="topBanner">
-			<img id="NavBanner" src="../assets/SovNavBanner.png"/>
-				<div id="LeftNavigation">
-					<ul>
-  						<li><a class="active" href="../pages/SovHome.html">Home</a></li>
-  						<li class="Communitydropdown">
-  							<a class="active" href="../pages/Forums.html">Community</a>
-  							<div class="Communitydropdown-content">
-  								<a href="https://discord.gg/9aUPyFR">Discord</a>
-  								<a onclick="copyToClipboard('TS')">Team Speak</a>
-  								<a href="https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ">Youtube</a>
-  							</div>
-  						</li>
-  						<li class="Streamersdropdown">
-    						<a href="../pages/Streamers.html">Stream Tools</a>
-    						<div class="Streamersdropdown-content">
-    							<a href=""></a>
-    						</div>
-  						</li>
-  						<li><a class="active" href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
-  						<li><a class="active" href="../pages/Contact.html">Contact</a></li>
-  						<li><a class="active" href="../pages/About.html">About</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
-					</ul> 
-				</div>
-				<div id="RightNavigation">
-					<ul>
-  						<li><a class="active" href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
-  						<li><a class="active" href="../pages/BGSDivision.html">B.G.S. Info</a></li>
-  						<li><a class="active" href="../pages/HomeFleet.html">Home Fleet</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
-					</ul> 
-				</div>
-		</div>
-			
+		<div id="SovPage" style="height: 2270px;">
 		<div class="Streams">
 			<div id="StreamFeed">
 				<div id="Streamer">
-					<!--<iframe id="streamsource" src="https://eddb.io/faction/32745" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>-->
+					<iframe id="streamsource" src="https://player.twitch.tv/?channel=djtruthsayer" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
 				</div>
 				<div id="StreamInfo">
-					<span>Streamer</span>
+					<span class="stream-meta"><a href="https://www.twitch.tv/djtruthsayer" id="StreamersName">DJTruthsayer</a>
+					<span class="playing">Playing</span> 
+					<a href="https://www.twitch.tv/directory/game/Elite:%20Dangerous" id="GamePlayed">Elite: Dangerous</a></span>
 				</div>
 				<div id="TwitchFollow">
-					<a class="follow twitch-follow host" href="../pages/Follow.html" target="_blank">Follow!</a>
+					<div id="FollowStream"><a id="follow" href="https://www.twitch.tv/djtruthsayer">Follow</a></div>
+					<div id="DonateStream"><a id="Donate" href="https://streamlabs.com/djtruthsayer">Donate</a></div>
+					<div id="SubStream"><a id="Subscribe" href="https://secure.twitch.tv/products/djtruthsayer/ticket/new">Subscribe</a></div>
 				</div>
 				<div id="Chat">
-					<!--<iframe id="chatsource" src="https://www.twitch.tv/vinesauce/chat?popout=" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>-->
+					<iframe id="chatsource" src="https://www.twitch.tv/djtruthsayer/chat?popout=" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
 				</div>
 			</div>
 			<div id="OtherStreams">
 				<div id="page1">
-					<div id="LIFrame" style="left: 25%; top: 20%;">
+					<div id="LIFrame" style="left: 18%; top: 20%;" onClick="setStreamer(Lords[0])">
 						<div id="Streamer1">
 							<div id="LIPhoto">
-								<img class="stream1" src="../assets/profilepictures/DJTruthsayer.png" height="100%" width="100%"/>
+								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[0] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
 							</div>
 							<div id="LILiveStatus">
-								<img class="stream1" id="LiveButton" data-twitch-channel="djtruthsayer">
+								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[0] + '"/>');</script>
 							</div>
 							<div id="LIStreamerInfo">
-								<a class="w3-text-purple LIStreamerName stream1" href="javascript: onClick=setStreamer('DJTruthsayer')">DJTruthsayer</a>
+								<script>document.write('<span class="w3-text-purple">' + Lords[0] + '</span>')</script>
 							</div>
 						</div>
 					</div>
-					<div id="LIFrame" style="left: 42%; top: 20%;">
+					
+					<div id="LIFrame" style="left: 40%; top: 20%;" onClick="setStreamer(Lords[1])">
 						<div id="Streamer1">
 							<div id="LIPhoto">
 								<img id="MalicPhoto" height="100%" width="100%"/>
 							</div>
 							<div id="LILiveStatus">
-								<img id="LiveButton" data-twitch-channel="Malic_VR" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[1] + '"/>');</script>
 							</div>
 							<div id="LIStreamerInfo">
-								<a class="w3-text-purple LIStreamerName" href="javascript: onClick=setStreamer('Malic_VR')">Malic_VR</a>
+								<script>document.write('<span class="w3-text-purple">' + Lords[1] + '</span>')</script>
 							</div>
 						</div>
 					</div>
-					<div id="LIFrame" style="left: 59%; top: 20%;">
+					<div id="LIFrame" style="left: 62%; top: 20%;" onClick="setStreamer(Lords[2])">
 						<div id="Streamer1">
 							<div id="LIPhoto">
-								<img src="../assets/profilepictures/Khaleb_Daarke.png" height="100%" width="100%"/>
+								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[2] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
 							</div>
 							<div id="LILiveStatus">
-								<img id="LiveButton" data-twitch-channel="Khaleb_Daarke" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[2] + '"/>');</script>
 							</div>
 							<div id="LIStreamerInfo">
-								<a class="w3-text-purple LIStreamerName" href="javascript: onClick=setStreamer('Khaleb_Daarke')">Khaleb_Daarke</a>
+								<script>document.write('<span class="w3-text-purple">' + Lords[2] + '</span>')</script>
 							</div>
 						</div>
 					</div>
-					<div id="LIFrame" style="left: 33%; top: 50%;">
+					<div id="LIFrame" style="left: 30%; top: 48%;" onClick="setStreamer(Lords[3])">
 						<div id="Streamer1">
 							<div id="LIPhoto">
-								<img src="../assets/profilepictures/CMDRHughMann.jpeg" height="100%" width="100%"/>
+								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[3] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
 							</div>
 							<div id="LILiveStatus">
-								<img id="LiveButton" data-twitch-channel="CMDRHughMann" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[3] + '"/>');</script>
 							</div>
 							<div id="LIStreamerInfo">
-								<a class="w3-text-purple LIStreamerName" href="javascript: onClick=setStreamer('CMDRHughMann')">CMDRHughMann</a>
+								<script>document.write('<span class="w3-text-purple">' + Lords[3] + '</span>')</script>
 							</div>
 						</div>
 					</div>
-					<div id="LIFrame" style="left: 50%; top: 50%;">
+					<div id="LIFrame" style="left: 52%; top: 48%;" onClick="setStreamer(Lords[4])">
 						<div id="Streamer1">
 							<div id="LIPhoto">
-								<img src="../assets/profilepictures/MarvinDarkstone.png" height="100%" width="100%"/>
+								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[4] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
 							</div>
 							<div id="LILiveStatus">
-								<img id="LiveButton" data-twitch-channel="MarvinDarkstone" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[4] + '"/>');</script>
 							</div>
 							<div id="LIStreamerInfo">
-								<a class="w3-text-purple LIStreamerName" href="javascript: onClick=setStreamer('MarvinDarkstone')">MarvinDarkstone</a>
+								<script>document.write('<span class="w3-text-purple">' + Lords[4] + '</span>')</script>
 							</div>
 						</div>
 					</div>
@@ -785,22 +754,58 @@
 				
 				<div class="w3-center w3-padding-32">
     				<div class="paigination w3-dark-gray w3-text-black">
-  						<a class="w3-button w3-hover-black" href="#">&laquo;</a>
       					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('1')">Lord Inquisitors</a>
      					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('2')">System Controllers</a>
       					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('3')">Arbiters</a>
       					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('4')">Zealots</a>
       					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('5')">Inquisitors</a>
-  						<a class="w3-button w3-hover-black" href="#">&raquo;</a>
     				</div>
   				</div>
 			</div>
 		</div>
-
+		
+		<div id="TopBanner"></div>
+		<div id="BottomBanner"></div>
+		
+		<div class="topBanner">
+			<img id="SovLogo" src="../assets/SovLogo.png"/>
+				<div id="LeftNavigation">
+					<ul>
+  						<li><a href="../pages/SovHome.html">Home</a></li>
+  						<li class="Communitydropdown">
+  							<a href="../pages/Forums.html">Community</a>
+  							<div class="Communitydropdown-content">
+  								<a href="https://discord.gg/9aUPyFR">Discord</a>
+  								<a onclick="copyToClipboard('TS')">TeamSpeak</a>
+  								<a href="https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ">Youtube</a>
+  							</div>
+  						</li>
+  						<li class="Streamersdropdown active">
+    						<a href="../pages/Streamers.html">Stream Tools</a>
+    						<div class="Streamersdropdown-content">
+    							<a href=""></a>
+    						</div>
+  						</li>
+  						<li><a href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
+  						<li><a href="../pages/Contact.html">Contact</a></li>
+  						<li><a href="../pages/About.html">About</a></li>
+  						<!--<li><a class="active" href=""/a></li>-->
+					</ul> 
+				</div>
+				<div id="RightNavigation">
+					<ul>
+  						<li><a href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
+  						<li><a href="../pages/BGSDivision.html">B.G.S. Info</a></li>
+  						<li><a href="../pages/HomeFleet.html">Home Fleet</a></li>
+  						<!--<li><a class="active" href=""/a></li>-->
+					</ul> 
+				</div>
+		</div>
+		
+		
 		<p id="TS" class="w3-hide">50.205.53.70</p>
 	
 		<div class="FooterBanner">
-			<img id="BottomBanner" src="../assets/SovFooterBanner.png" />
 			<div id="FooterButtons">
 				<ul>
   					<li><image class="Youtube" src="../assets/Youtube.png" onclick="
@@ -815,5 +820,8 @@
 	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="https://cdn.rawgit.com/robbiemu/Twitch-Channel-Status/master/twitch-channel-status.js" data-interval="120" data-clientid="ji36kztzgizwvlq7oob8r7krk2ac1b" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" ></script>
 	<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
+	
+	
+	</div>
 	</body>
 </html>

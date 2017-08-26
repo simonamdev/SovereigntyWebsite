@@ -41,5 +41,6 @@ document.addEventListener('keydown', function(e) {
 function activateCheats() 
 {
 	alert("Delivering rainbows!");
-  	location.replace("../pages/Unicorn.html");
+	document.getElementById('Unicorn').src = 'https://www.youtube.com/embed/17o1OlroNSE?autoplay=1';
+	document.getElementById('Unicorn').style.display = 'block';
 }

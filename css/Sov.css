@@ -1,6 +1,58 @@
-body
+#SovPage
 {
-	margin: 0;
+	height: 1800px;
+	width: 1550px;
+	margin: auto;
+	position: relative;
+}
+#SovLogo
+{
+	height: 90px;
+	width: 90px;
+	left: 47.05%;
+	top: -23px;
+	position: absolute;
+}
+.active
+{
+	background-color: #70675D;
+	opacity: 1;
+	filter: alpha(opacity=100);
+}
+#LeftHalf
+{
+	width: 50%;
+	height: 100%;
+	background-color: violet;
+	opacity: 0.1;
+	position: absolute;
+	display: none;
+}
+
+#TopBanner
+{
+	width: 100%;
+	height: 60px;
+	opacity: 0.9;
+	top: 0;
+	position: absolute;
+	background-color: #837B6E;
+    border-bottom: 20px solid #1C1010;
+}
+#BottomBanner
+{
+	width: 100%;
+	height: 60px;
+	opacity: 0.8;
+	position: absolute;
+	background-color: #847A6E;
+    border-top: 20px solid #1C1010;
+}
+
+span
+{
+	height: 100%;
+	width: 100%;
 }
 #background
 {
@@ -9,28 +61,24 @@ body
 	background-color: black;
 	height: 100%;
 	width: 100%;
-	display: block;
 }
 .topBanner
 {
-	height:9%;
-	width:100%;
-	top: 0;
+	height: 66px;
+	width: 100%;
 	position:absolute;
 }
 #NavBanner
 {
-	height:100%;
-	width:100%;
-	position:absolute;
+	width: 100%;
+	margin: 0 auto;
 }
 #LeftNavigation
 {
-	height:60%;
-	width: 48%;
+	top: 4px;
+	width: 50%;
+	height: 50px;
 	position:absolute;
-	left: 0%;
-	top: 0%;
 }
 #LeftNavigation ul 
 {
@@ -48,12 +96,10 @@ body
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 6px 16px;
+	padding: 5px 10px;
 	text-decoration: none;
-	background-color: #8A7F72;
-	border-right: 1px solid #FFFFFF;
-	border-left: 1px solid #FFFFFF;
 	opacity: 0.5;
+	border-right: 1px solid #FFFFFF;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 #LeftNavigation li a:hover
@@ -66,14 +112,17 @@ body
 
 #RightNavigation
 {
-	height:60%;
-	width: 25%;
+	top: 4px;
+	height:30px;
 	position:absolute;
-	right: 0;
+	right: 30px;
+	display: none;
 }
 #RightNavigation ul 
 {
     list-style-type: none;
+	height:100%;
+	width:100%;
     margin: 0;
     padding: 0;
 	overflow: hidden;
@@ -87,12 +136,11 @@ body
 	display: block;
 	color: white;
 	text-align: center;
-	padding: 6px 16px;
-	text-decoration: none;
-	background-color: #8A7F72;
-	border-right: 1px solid #FFFFFF;
+	padding: 5px 10px;
 	border-left: 1px solid #FFFFFF;
 	opacity: 0.5;
+	height:100%;
+	width:100%;
     filter: alpha(opacity=50); /* For IE8 and earlier */
 }
 #RightNavigation li a:hover
@@ -108,7 +156,6 @@ body
     display: inline-block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
 }
 #RightNavigation li a:hover, .Communitydropdown:hover .dropbtn 
@@ -122,15 +169,13 @@ body
 .Communitydropdown-content {
     display: none;
     position: absolute;
+	width: 108px;
     background-color: #7C7266;
-    min-width: 100px;
-	left: 77px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0% 0% 0% 0% rgba(0,0,0,0.2);
     z-index: 1;
 }
 .Communitydropdown-content a {
-    color: white;
-    padding: 12px 16px;
+    padding: 4% 8%;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -143,27 +188,18 @@ body
 {
     display: block;
 }
-
-#Navigation li a:hover, .Streamersdropdown:hover .dropbtn 
-{
-    background-color: red;
-}
-#Navigation li.Streamersdropdown 
-{
-    display: inline-block;
-}
 .Streamersdropdown-content {
     display: none;
     position: absolute;
     background-color: #7C7266;
-    min-width: 100px;
-	left: 165px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    min-width: 10%;
+	left: 30%;
+    box-shadow: 0% 4% 8% 0% rgba(0,0,0,0.2);
     z-index: 1;
 }
 .Streamersdropdown-content a {
     color: white;
-    padding: 12px 16px;
+    padding: 6% 8%;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -179,85 +215,86 @@ body
 
 #MainBody
 {
-	width: 98%;
-	height: 100%;
-	top: 10%;
-	left: 1%;
+	width: 100%;
+	height: 900px;
 	margin: auto;
 	position: absolute;
+	
 }
 .VideoFrame
 {
-	height:60%;
-	width:50%;
-	margin: auto;
-	top: 10%;
-	position:relative;
+	height:450px;
+	width:700px;
+	left: 420px;
+	top: 150px;
+	position:absolute;
 }
 #HomeVidFrame
 {
 	height: 100%;
 	width: 100%;
 	position:absolute;
-    border-radius: 25px;
+    border-radius: 50px;
 }
 #Video
 {
 	height:97%;
 	width:97%;
 	top: 1.5%;
-	margin: auto;
-	position:relative;
+	left: 1.5%;
+	position:absolute;
 }
 #FillerImage
 {
 	height:100%;
 	width:100%;
-    border-radius: 25px;
+    border-radius: 50px;
+	position: absolute;
 }
 #Unicorn
 {
 	height: 100%;
 	width: 100%;
+    border-radius: 50px;
+	position: absolute;
 }
 #socialandnews
 {
-	width: 98%;
-	height: 100%;
-	top: 110%;
+	width: 100%;
+	height: 900px;
+	top: 900px;
 	left: 1%;
 	position: absolute;
 }
 #News
 {
-    border-radius: 25px;
-	height: 100%;
-	width: 33%;
+    border-radius: 50px;
+	height: 800px;
+	width: 500px;
 	background-color: azure;
 	position: absolute;
 }
 #Events
 {
-    border-radius: 25px;
-	height: 100%;
-	width: 33%;
-	left: 33.5%;
+    border-radius: 50px;
+	height: 800px;
+	width: 500px;
+	left: 33%;
 	background-color: azure;
 	position: absolute;
 }
 #Twitter
 {
-    border-radius: 25px;
-	height: 100%;
-	width: 33%;
-	right: 0;
-	background-color: azure;
+    border-radius: 50px;
+	height: 800px;
+	width: 500px;
+	right: 25px;
 	position: absolute;
 }
 
 .twitter-timeline
 {
-    border-radius: 25px;
+    border-radius: 50px;
 	height:100%;
 	width:100%;
 	position: absolute;
@@ -284,35 +321,32 @@ body
 {
 	background-image: url(../assets/SovPressed.png)
 }
+
 .FooterBanner
 {
-	height: 7%;
+	height: 47px;
 	width: 100%;
 	bottom: 0;
-	position:fixed;
-	
+	margin: 0 auto;
+	position:absolute;
 }
 #BottomBanner
-{
-	height: 100%;
+{	
 	width: 100%;
-	margin: auto;
-	position: absolute;
-   	bottom:0;
+	margin: 0 auto;
 }
 #FooterButtons
 {
 	height: 100%;
 	width: 11.5%;
-    bottom: 20%;
 	position: absolute;
 	opacity: 0.2;
 }
 #FooterButtons ul 
 {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0%;
 	overflow: hidden;
 }
 #FooterButtons li
@@ -343,40 +377,46 @@ body
 }
 .Streams
 {
-	background-color: #1F1F1F;
 	margin: auto;
-	height: 80%;
-	width: 99%;
+	height: 700px;
+	width: 1500px;
+	left: 25px;
 	position: absolute;
-	top: 80px;
-	left: 0.5%;
+	top: 100px;
 }
 #StreamFeed
 {
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+	background-color: #1F1F1F;
 	height: 100%;
 	width: 100%;
 	position: absolute;
+	display: none;
 }
 #Streamer
 {
+	border-radius: 20px;
 	top: 1.3%;
 	left: 0.5%;
 	height: 87%;
-	width: 75%;
+	width: 70%;
 	position: absolute;
 	background-color: #171717;
 }
 #Chat
 {
+	border-radius: 20px;
 	right: 0.5%;
 	top: 1.3%;
 	height: 97.3%;
-	width: 23.4%;
+	width: 28.5%;
 	position: absolute;
 	background-color: #171717;
 }
 #StreamInfo
 {
+	border-radius: 10px;
 	bottom: 1.3%;
 	left: 0.5%;
 	position: absolute;
@@ -384,28 +424,136 @@ body
 	width: 50%;
 	background-color: #171717;
 }
+#streamsource
+{
+	border-radius: 20px;
+}
+#chatsource
+{
+	border-radius: 20px;
+}
 #TwitchFollow
 {
+	border-radius: 10px;
 	bottom: 1.3%;
 	position: absolute;
 	height: 9%;
-	width: 24.5%;
-	right: 24.5%;
+	width: 19.5%;
+	right: 29.5%;
 	background-color: #171717;
+}
+#FollowStream
+{
+	height: 100%;
+	width: 33%;
+	position: absolute;
+	background-color: rebeccapurple;
+    background-image: linear-gradient(to bottom, black 94%,white 0%), url('w3css.gif');
+  	background-blend-mode: color-dodge;
+	box-shadow: inset 0px 0px 5px #000;
+	border-bottom-left-radius: 10px;
+	border-top-left-radius: 10px;
+}
+#follow
+{
+	position: absolute;
+	left: 30%;
+	top: 30%;
+	color: white;
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+}
+#DonateStream
+{
+	left: 33%;
+	height: 100%;
+	width: 34%;
+	position: absolute;
+	background-color: rebeccapurple;
+    background-image: linear-gradient(to bottom, black 94%,white 0%), url('w3css.gif');
+  	background-blend-mode: color-dodge;
+	box-shadow: inset 0px 0px 5px #000;
+}
+#Donate
+{
+	position: absolute;
+	left: 25%;
+	top: 30%;
+	color: white;
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+}
+#SubStream
+{
+	right: 0;
+	height: 100%;
+	width: 33%;
+	position: absolute;
+	background-color: rebeccapurple;
+    background-image: linear-gradient(to bottom, black 94%,white 0%), url('w3css.gif');
+  	background-blend-mode: color-dodge;
+	box-shadow: inset 0px 0px 5px #000;
+	border-bottom-right-radius: 10px;
+	border-top-right-radius: 10px;
+}
+#Subscribe
+{
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	color: white;
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+}
+.stream-meta
+{
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+#StreamersName
+{
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+	color: white;
+}
+.playing
+{
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+	color: rebeccapurple;
+}
+#GamePlayed
+{
+	font: bold;
+	font-weight:bolder;
+	font-family:Arial,sans-serif;
+	color: white;
 }
 #OtherStreams
 {
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
 	background-color: #1A1A1A;
 	position: relative;
 	height: 200%;
 	width: 100%;
 	margin: auto;
-	top: 100%;
+	top: 0;
+}
+#MalicPhoto
+{
+	border-radius: 10%;
 }
 .paigination
 {
 	bottom: 5%;
-	left: 23%;
+	left: 31%;
 	position: absolute;
 }
 #column1
@@ -437,6 +585,7 @@ body
 }
 #Frame
 {
+	border-radius: 10%;
 	width: 96%;
 	height: 5%;
 	left: 2%;
@@ -447,41 +596,48 @@ body
 }
 #LIFrame
 {
-	width: 15%;
+	border-radius: 10%;
+	width: 20%;
 	height: 25%;
 	position: absolute;
 	background-color:#242424;
 }
 #LIPhoto
 {
+	border-radius: 10%;
 	width: 100%;
 	height: 90%;
 	position: absolute;
 }
 #LILiveStatus
 {
+	border-radius: 100%;
 	height: 10%;
 	width: 10%;
-	bottom: 0;
-	left: 0;
+	bottom: 0%;
+	left: 0%;
 	position: absolute;
 	background-color:#242424;
 }
 #LIStreamerInfo
 {
+	font-family:Arial,sans-serif;
 	position: absolute;
 	width: 80%;
-	height: 10%;
-	bottom: 0;
-	right: 0;
+	bottom: 5px;
+	left: 40px;
 }
 .LIStreamerName
 {
 	position: absolute;
-	right: 0;
+	right: 0%;
 	bottom: 10%;
-	padding: 0;
+	padding: 0%;
 	background-color:#242424;
+}
+.UniqueIcon
+{
+	border-radius: 10%;
 }
 #Photo
 {
@@ -501,18 +657,12 @@ body
 }
 #StreamerInfo
 {
+	border-radius: 10%;
 	width: 79%;
 	height: 90%;
 	top: 5%;
 	right: 0.6%;
 	position: absolute;
-}
-.StreamerName
-{
-	position: absolute;
-	padding: 0;
-	left: 0;
-	top: 20%;
 }
 #LiveButton
 {
