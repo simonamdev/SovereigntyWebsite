@@ -4,75 +4,82 @@
 	<head>
 		<link rel="stylesheet" type="text/css" href="../css/Sov.css">
 		<link rel="stylesheet" type="text/css" href="../css/w3.css">
-		<link rel="icon" href="assets/SovLogo.png" type="image/gif" sizes="596x596">
+		<link rel="icon" href="../assets/SovLogo.png" type="image/gif" sizes="596x596">
 		<meta charset="UTF-8">
 		<title>The Sovereignty</title>
-		
 	</head>
+	
 	<script src="../js/copytext.js"></script>
 	<script src="../js/changeBackground.js"></script>
-	
-	
-	<!--<img id="background" src="communitybackgrounds/background1.png"/>-->
+	<script src="../js/SovData.js"></script>
 	
 	<img id="background" src="https://pbs.twimg.com/profile_images/751168765191081988/3y6h5fRA_400x400.jpg"/>
 	
 	<body>
+		<div id="TopBanner"></div>
+		<div id="SovPage">
+			<div id="MainBody">
+				<div id="AboutUsPanel">
+					<div id="History">
+						<span>History</span>
+						<img src="../assets/TIIQLogo.png"/>
+						<img src="../assets/SovLogo.png" style="left: 54%;"/>
+						<p>The Imperial Inquisition, starting as a joke one night on a teamspeak, sparked and formed into the foundation to allow the sovereignty to grow</p>
+					</div>
+					<div id="Lore">
+						<span>Lore</span>
+						<p>The Sovereignty, a group led by their prestigious leader Mavia Kain, was founded in June 3301 by a gathering of like minded individuals at Dalgarno Station, Kamchadals. They quickly relocated their operation to their famous headquarters, Roed Odegaard Port in the Brestla system. Created to fight for the traditions of the Empire and prepare a defence in time for the return of the Thargoids under the name “The Imperial Inquisition”. The Inquisition worked tirelessly within the Empire, lobbying for a return to the traditions that had kept the Empire strong for a millenia. In January 3302 The Inquisition made an appeal  to the galactic community to aid in the upgrade of the I Sola Prospect station on Brestla 1A to a “founders” level station, where every ship and module could be purchased. This appeal was successful, making I Sola Prospect the only non-permit station where every module is available.  When the Federal-Imperial war in the Pleiades nebula in 3302 began The Inquisition was chosen to represent the Empire and found itself under attack by it’s own imperial allies. After diplomatic inquiries were made, it was made clear that their dream of returning the Empire to “the old ways” was unwelcome. This led to The Inquisition officially seceding from the Empire in September 3302 and reasserting itself as “The Sovereignty”, an independent group dedicated to returning the Empire to the beliefs and ideals espoused by Henson Duval. Since then, The Sovereignty have gone on to establish a presence within the Colonia bubble and have led several large scale charity efforts. They continue to fight for the return of the Duval line to the Imperial Throne, supporting Harold Duval’s right to the title of Emperor.</p>
+					</div>
+					<div id="AdminTeam">
+						
+					</div>
+				</div>
+			</div>
 		<div class="topBanner">
-			<img id="NavBanner" src="../assets/SovNavBanner.png"/>
+			<div id="Logo">
+				<img id="SovLogo" src="../assets/SovLogo.png"/>
+				<img id="SovGlow" src="../assets/SovLogo-Glow.gif"/>
+				<div id="SovAlert">
+					<div id="InnerBorder">
+						<p id="AlertText"><script>document.write(Alert_Description);</script></p>
+					</div>
+				</div>
+			</div>
 				<div id="LeftNavigation">
 					<ul>
-  						<li><a class="active" href="../pages/SovHome.html">Home</a></li>
+  						<li><a href="../pages/index.html">Home</a></li>
   						<li class="Communitydropdown">
-  							<a class="active" href="../pages/Forums.html">Community</a>
+  							<a href="#">Community</a>
   							<div class="Communitydropdown-content">
   								<a href="https://discord.gg/9aUPyFR">Discord</a>
-  								<a onclick="copyToClipboard('TS')">Team Speak</a>
-  								<a href="https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ">Youtube</a>
+  								<a onclick="copyToClipboard('TS')">TeamSpeak</a>
   							</div>
   						</li>
-  						<li class="Streamersdropdown">
-    						<a href="../pages/Streamers.html">Streamers</a>
-  						</li>
-  						<li><a class="active" href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
-  						<li><a class="active" href="../pages/Contact.html">Contact</a></li>
+  						<li><a href="../pages/Streamers.html">Streamers</a></li>
+  						<li><a href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
+  						<li><a href="../pages/Contact.html">Contact</a></li>
   						<li><a class="active" href="../pages/About.html">About</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
+  						<li><a href="../pages/Support.html">Support</a></li>
 					</ul> 
 				</div>
 				<div id="RightNavigation">
 					<ul>
-  						<li><a class="active" href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
-  						<li><a class="active" href="../pages/BGSDivision.html">B.G.S. Info</a></li>
-  						<li><a class="active" href="../pages/HomeFleet.html">Home Fleet</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
+  						<li><a href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
+  						<li><a href="../pages/BGSDivision.html">B.G.S. Info</a></li>
+  						<li><a href="../pages/HomeFleet.html">Home Fleet</a></li>
 					</ul> 
 				</div>
 		</div>
-			
 		
-		
-		
-			
-		<!--<div class="SovBanner">
-			<img id="Banner" src="assets/SovHomeBanner.png">
-			
-		</div>-->
-
+		<div id="FooterButtons">
+			<ul>
+  				<li><image class="TeamSpeak" src="../assets/TeamSpeak.png" onclick="copyToClipboard('TS')"></image></li>
+				<li><image class="Discord" src="../assets/Discord.png" onclick="location.replace('https://discord.gg/9aUPyFR')"></image></li>
+			</ul> 
+		</div>
 		<p id="TS" class="w3-hide">50.205.53.70</p>
 	
-		<div class="FooterBanner">
-			<img id="BottomBanner" src="../assets/SovFooterBanner.png" />
-			<div id="FooterButtons">
-				<ul>
-  					<li><image class="Youtube" src="../assets/Youtube.png" onclick="
-  	location.replace('https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ')"></image></li>
-  					<li><image class="TeamSpeak" src="../assets/teamspeak.png" onclick="copyToClipboard('TS')"></image></li>
-					<li><image class="Discord" src="../assets/discord.png" onclick="location.replace('https://discord.gg/9aUPyFR')"></image></li>
-  						<!--<li><a class="active" href=""/a></li>-->
-				</ul> 
-			</div>
 		</div>
-	
+		<div id="BottomBanner"></div>
 	</body>
 </html>

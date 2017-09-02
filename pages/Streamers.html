@@ -12,784 +12,435 @@
 	<script src="../js/copytext.js"></script>
 	<script src="../js/changepage.js"></script>
 	<script src="../js/changeStreamer.js"></script>
-	<script src="../js/SovStreamers.js"></script>
 	<script src="../js/changeBackground.js"></script>
 	<script src="../js/malic.js"></script>
-	
-	<!--<img id="background" src="communitybackgrounds/background1.png"/>-->
+	<script src="../js/SovData.js"></script>
 	
 	<img id="background" src="https://pbs.twimg.com/profile_images/751168765191081988/3y6h5fRA_400x400.jpg"/>
 	
 	<body>
+		<div id="TopBanner"></div>
 		<div id="SovPage" style="height: 2270px;">
-		<div class="Streams">
-			<div id="StreamFeed">
-				<div id="Streamer">
-					<iframe id="streamsource" src="https://player.twitch.tv/?channel=djtruthsayer" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+			<div class="Streams">
+				<div id="StreamFeed">
+					<div id="Streamer">
+						<iframe id="streamsource" src="https://player.twitch.tv/?channel=djtruthsayer" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+					</div>
+					<div id="StreamInfo">
+						<span class="stream-meta"><a href="https://www.twitch.tv/djtruthsayer" id="StreamersName">DJTruthsayer</a>
+						<span class="playing">Playing</span> 
+						<a href="https://www.twitch.tv/directory/game/Elite:%20Dangerous" id="GamePlayed">Elite: Dangerous</a></span>
+					</div>
+					<div id="TwitchFollow">
+						<div id="FollowStream"><a id="follow" href="https://www.twitch.tv/djtruthsayer">Follow</a></div>
+						<div id="DonateStream"><a id="Donate" href="https://streamlabs.com/djtruthsayer">Donate</a></div>
+						<div id="SubStream"><a id="Subscribe" href="https://secure.twitch.tv/products/djtruthsayer/ticket/new">Subscribe</a></div>
+					</div>
+					<div id="Chat">
+						<iframe id="chatsource" src="https://www.twitch.tv/djtruthsayer/chat?popout=" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
+					</div>
 				</div>
-				<div id="StreamInfo">
-					<span class="stream-meta"><a href="https://www.twitch.tv/djtruthsayer" id="StreamersName">DJTruthsayer</a>
-					<span class="playing">Playing</span> 
-					<a href="https://www.twitch.tv/directory/game/Elite:%20Dangerous" id="GamePlayed">Elite: Dangerous</a></span>
-				</div>
-				<div id="TwitchFollow">
-					<div id="FollowStream"><a id="follow" href="https://www.twitch.tv/djtruthsayer">Follow</a></div>
-					<div id="DonateStream"><a id="Donate" href="https://streamlabs.com/djtruthsayer">Donate</a></div>
-					<div id="SubStream"><a id="Subscribe" href="https://secure.twitch.tv/products/djtruthsayer/ticket/new">Subscribe</a></div>
-				</div>
-				<div id="Chat">
-					<iframe id="chatsource" src="https://www.twitch.tv/djtruthsayer/chat?popout=" frameborder="0" scrolling="no" height="100%" width="100%"></iframe>
-				</div>
-			</div>
-			<div id="OtherStreams">
-				<div id="page1">
-					<div id="LIFrame" style="left: 18%; top: 20%;" onClick="setStreamer(Lords[0])">
-						<div id="Streamer1">
-							<div id="LIPhoto">
-								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[0] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
-							</div>
-							<div id="LILiveStatus">
-								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[0] + '"/>');</script>
-							</div>
-							<div id="LIStreamerInfo">
-								<script>document.write('<span class="w3-text-purple">' + Lords[0] + '</span>')</script>
+				<div id="OtherStreams">
+					<div id="page1">
+						<div class="LIFrame" style="left: 18%; top: 20%;" onClick="setStreamer('DJTruthsayer')">
+							<div class="LIStreamer">
+								<div class="LIPhoto">
+									<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/DJTruthsayer.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+								</div>
+								<div class="LILiveStatus">
+									<img class="LiveButton" data-twitch-channel="DJTruthsayer"/>
+								</div>
+								<div class="LIStreamerInfo">
+									<span class="w3-text-purple">DJTruthsayer</span>
+								</div>
 							</div>
 						</div>
-					</div>
 					
-					<div id="LIFrame" style="left: 40%; top: 20%;" onClick="setStreamer(Lords[1])">
-						<div id="Streamer1">
-							<div id="LIPhoto">
-								<img id="MalicPhoto" height="100%" width="100%"/>
-							</div>
-							<div id="LILiveStatus">
-								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[1] + '"/>');</script>
-							</div>
-							<div id="LIStreamerInfo">
-								<script>document.write('<span class="w3-text-purple">' + Lords[1] + '</span>')</script>
-							</div>
-						</div>
-					</div>
-					<div id="LIFrame" style="left: 62%; top: 20%;" onClick="setStreamer(Lords[2])">
-						<div id="Streamer1">
-							<div id="LIPhoto">
-								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[2] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
-							</div>
-							<div id="LILiveStatus">
-								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[2] + '"/>');</script>
-							</div>
-							<div id="LIStreamerInfo">
-								<script>document.write('<span class="w3-text-purple">' + Lords[2] + '</span>')</script>
-							</div>
-						</div>
-					</div>
-					<div id="LIFrame" style="left: 30%; top: 48%;" onClick="setStreamer(Lords[3])">
-						<div id="Streamer1">
-							<div id="LIPhoto">
-								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[3] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
-							</div>
-							<div id="LILiveStatus">
-								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[3] + '"/>');</script>
-							</div>
-							<div id="LIStreamerInfo">
-								<script>document.write('<span class="w3-text-purple">' + Lords[3] + '</span>')</script>
-							</div>
-						</div>
-					</div>
-					<div id="LIFrame" style="left: 52%; top: 48%;" onClick="setStreamer(Lords[4])">
-						<div id="Streamer1">
-							<div id="LIPhoto">
-								<script>document.write('<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/' + Lords[4] + '.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>');</script>
-							</div>
-							<div id="LILiveStatus">
-								<script>document.write('<img id="LiveButton" data-twitch-channel="' + Lords[4] + '"/>');</script>
-							</div>
-							<div id="LIStreamerInfo">
-								<script>document.write('<span class="w3-text-purple">' + Lords[4] + '</span>')</script>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div id="page2">
-					
-				</div>
-				<div id="page3">
-					
-				</div>
-				<div id="page4">
-					
-				</div>
-				<div id="page5">
-					<div id="column1">
-						<div id="Frame">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img src="../assets/profilepictures/DJTruthsayer.png" height="100%" width="100%"/>
+						<div class="LIFrame" style="left: 40%; top: 20%;" onClick="setStreamer('Malic_VR')">
+							<div class="LIStreamer">
+								<div class="LIPhoto">
+									<img id="MalicPhoto" height="100%" width="100%"/>
 								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="DJTruthsayer" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<div class="LILiveStatus">
+									<img class="LiveButton" data-twitch-channel="Malic_VR"/>
 								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
+								<div class="LIStreamerInfo">
+									<span class="w3-text-purple">Malic_VR</span>
 								</div>
 							</div>
 						</div>
-						<div id="Frame" style="top: 7%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img id="MalicPhoto" title="Malic is one of the leaders of the sovereignty, known for googly eyes and yelling at potatoes." src="" height="100%" width="100%"/>
+						<div class="LIFrame" style="left: 62%; top: 20%;" onClick="setStreamer('Khaleb_Daarke')">
+							<div class="LIStreamer">
+								<div class="LIPhoto">
+									<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Khaleb_Daarke.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
 								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<div class="LILiveStatus">
+									<img class="LiveButton" data-twitch-channel="Khaleb_Daarke"/>
 								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('Malic_VR')">Lord Inquisitor: Malic_VR</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 13%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="Khaleb Daarke, another lord inquisitor of the sovereignty whom is strong willed and knows how to handle a temper, just dont mention immursion around him." src="../assets/profilepictures/Khaleb_Daarke.png" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Khaleb_Daarke" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('Khaleb_Daarke')">Lord Inquisitor: Khaleb Daarke</a>
+								<div class="LIStreamerInfo">
+									<span class="w3-text-purple">Khaleb_Daarke</span>
 								</div>
 							</div>
 						</div>
-						<div id="Frame" style="top: 19%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="MarvinDarkstone" src="../assets/profilepictures/MarvinDarkstone.png" height="100%" width="100%"/>
+						<div class="LIFrame" style="left: 30%; top: 48%;" onClick="setStreamer('MARViNDarkStone')">
+							<div class="LIStreamer">
+								<div class="LIPhoto">
+									<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/MarvinDarkstone.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
 								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="MarvinDarkstone" data-interval="120" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<div class="LILiveStatus">
+									<img class="LiveButton" data-twitch-channel="MARViNDarkStone"/>
 								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('MarvinDarkstone')">Lord Inquisitor: Marvin Darkstone</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 25%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="Dan the HughMann" src="../assets/profilepictures/CMDRHughMann.jpeg" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="CMDRHughMann" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('CMDRHughMann')">Lord Inquisitor: CMDRHughMann</a>
+								<div class="LIStreamerInfo">
+									<span class="w3-text-purple">MARViNDarkStone</span>
 								</div>
 							</div>
 						</div>
-						<div id="Frame" style="top: 31%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="Carrumba" src="../assets/profilepictures/Carrumba.png" height="100%" width="100%"/>
+						<div class="LIFrame" style="left: 52%; top: 48%;" onClick="setStreamer('CMDRHughMann')">
+							<div class="LIStreamer">
+								<div class="LIPhoto">
+									<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/CMDRHughMann.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
 								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Carrumba" data-interval="120" data-online-	image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+								<div class="LILiveStatus">
+									<img class="LiveButton" data-twitch-channel="CMDRHughMann"/>
 								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-red StreamerName" href="javascript: onClick=setStreamer('Carrumba')">System Controller: Carrumba</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 37%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="CrazyCazenn" src="../assets/profilepictures/CrazyCazenn.png" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="CrazyCazenn" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-red StreamerName" href="javascript: onClick=setStreamer('CrazyCazenn')">System Controller: CrazyCazenn</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 43%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="Mat2596" src="../assets/profilepictures/Mat2596.png" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Mat2596" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-red StreamerName" href="javascript: onClick=setStreamer('Mat2596')">System Controller: Mat2596</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 49%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="Valkyrien27" src="../assets/profilepictures/Valkyrien27.png" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Valkyrien27" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-red StreamerName" href="javascript: onClick=setStreamer('Valkyrien27')">System Controller: Valkyrien27</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
+								<div class="LIStreamerInfo">
+									<span class="w3-text-purple">CMDRHughMann</span>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div id="column2">
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
+					<div id="page2">
+						<div class="Column" style="width: 500px; height: 1100px; left: 200px; top: 100px; position: absolute;">
+							<ul style="list-style-type: none;">
+								<li>
+									<div class="Streamer" onClick="setStreamer('The_Thargoid')">
+										<div class="Photo">
+											<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/The_Thargoid.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+										</div>
+										<div class="LiveStatus">
+											<img class="LiveButton" data-twitch-channel="The_Thargoid" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+										</div>
+										<div class="StreamerInfo">
+											<span class="StreamerName" style="color:hsla(5,93%,54%,1.00);">The_Thargoid</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="Streamer" onClick="setStreamer('carrumba0095')">
+										<div class="Photo">
+											<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/carrumba0095.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+										</div>
+										<div class="LiveStatus">
+											<img class="LiveButton" data-twitch-channel="carrumba0095" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+										</div>
+										<div class="StreamerInfo">
+											<span class="StreamerName"  style="color:hsla(5,93%,54%,1.00);">carrumba0095</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="Streamer" onClick="setStreamer('CrazyCazenn')">
+										<div class="Photo">
+											<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/CrazyCazenn.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+										</div>
+										<div class="LiveStatus">
+											<img class="LiveButton" data-twitch-channel="CrazyCazenn" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+										</div>
+										<div class="StreamerInfo">
+											<span class="StreamerName"  style="color:hsla(5,93%,54%,1.00);">CrazyCazenn</span>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
-						</div>
-						<div id="Frame" style="top: 55%">
-							<div id="Streamer1">
-								<div id="Photo">
-									<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-								</div>
-								<div id="LiveStatus">
-									<img id="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
-								</div>
-								<div id="StreamerInfo">
-									<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-								</div>
-							</div>
+						<div class="Column" style="width: 500px; height: 1100px; left: 800px; top: 100px; position: absolute;">
+							<ul style="list-style-type: none;">
+								<li>
+									<div class="Streamer" onClick="setStreamer('Ecrodorious')">
+										<div class="Photo">
+											<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Ecrodorious.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+										</div>
+										<div class="LiveStatus">
+											<img class="LiveButton" data-twitch-channel="Ecrodorious" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+										</div>
+										<div class="StreamerInfo">
+											<span class="StreamerName"  style="color:hsla(5,93%,54%,1.00);">Ecrodorious</span>
+										</div>
+									</div>
+								</li>
+								<li>
+									<div class="Streamer" onClick="setStreamer('Valkyrien27')">
+										<div class="Photo">
+											<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Valkyrien27.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+										</div>
+										<div class="LiveStatus">
+											<img class="LiveButton" data-twitch-channel="Malic_VR" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+										</div>
+										<div class="StreamerInfo">
+											<span class="StreamerName" style="color:hsla(5,93%,54%,1.00);">Valkyrien27</span>
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div id="column3">
-					<div id="Frame">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
+					<div id="page3">
+					<div class="Column" style="width: 450px; height: 1100px; left: 50px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('icehornet_')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/icehornet_.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="icehornet_" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">icehornet_</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Streamer" onClick="setStreamer('DLCoates1')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/DLCoates1.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="DLCoates1" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">DLCoates1</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Streamer" onClick="setStreamer('PaleGringo')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/PaleGringo.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="PaleGringo" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">PaleGringo</span>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
-					<div id="Frame" style="top: 7%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 530px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('ChaosDispenser')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/ChaosDispenser.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="ChaosDispenser" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">ChaosDispenser</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Streamer" onClick="setStreamer('Wizpirio')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Wizpirio.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="Wizpirio" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">Wizpirio</span>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
-					<div id="Frame" style="top: 13%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 19%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 25%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 31%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 37%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 43%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 49%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 55%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 61%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 67%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 73%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 79%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 85%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
-					</div>
-					<div id="Frame" style="top: 91%">
-						<div id="Streamer1">
-							<div id="Photo">
-								<img title="DJTruthsayer is the leader of the sovereignty, known for knowing where raxxla is, but never reveals the information" src="../assets/graeme.gif" height="100%" width="100%"/>
-							</div>
-							<div id="LiveStatus">
-								
-							</div>
-							<div id="StreamerInfo">
-								<a class="w3-text-purple StreamerName" href="javascript: onClick=setStreamer('DJTruthsayer')">Lord Inquisitor: DJTruthsayer</a>
-							</div>
-						</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 1000px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('jaxmaru')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/jaxmaru.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="jaxmaru" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName"  style="color:hsla(35,80%,60%,1.00);">jaxmaru</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Streamer" onClick="setStreamer('cmdrnade')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/cmdrnade.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="cmdrnade" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(35,80%,60%,1.00);">cmdrnade</span>
+									</div>
+								</div>
+							</li>
+						</ul>
 					</div>
 				</div>
+					<div id="page4">
+					<div class="Column" style="width: 450px; height: 1100px; left: 50px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('CptBlowUpDoll')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/CptBlowUpDoll.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="CptBlowUpDoll" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(103,49%,31%,1.00);">CptBlowUpDoll</span>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="Streamer" onClick="setStreamer('Loyallte')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Loyallte.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="Loyallte" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(103,49%,31%,1.00);">Loyallte</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 530px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('Faabmaster')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Faabmaster.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="Faabmaster" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(103,49%,31%,1.00);">Faabmaster</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 1000px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('Izehouze')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Izehouze.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="Izehouze" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName"  style="color:hsla(103,49%,31%,1.00);">Izehouze</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+					<div id="page5">
+					<div class="Column" style="width: 450px; height: 1100px; left: 50px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('Kongatron')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/Kongatron.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="Kongatron" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(211,64%,36%,1.00);">Kongatron</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 530px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							<li>
+								<div class="Streamer" onClick="setStreamer('LanceUppercut_CS')">
+									<div class="Photo">
+										<img class="UniqueIcon" alt="../assets/SovLogo.png" src="../assets/profilepictures/LanceUppercut_CS.png" height="100%" width="100%" onerror="this.onerror=null;this.src=this.alt;"/>
+									</div>
+									<div class="LiveStatus">
+										<img class="LiveButton" data-twitch-channel="LanceUppercut_CS" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" >
+									</div>
+									<div class="StreamerInfo">
+										<span class="StreamerName" style="color:hsla(211,64%,36%,1.00);">LanceUppercut_CS</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="Column" style="width: 450px; height: 1100px; left: 1000px; top: 50px; position: absolute;">
+						<ul style="list-style-type: none;">
+							
+						</ul>
+					</div>
 				</div>
 				
-				<div class="w3-center w3-padding-32">
-    				<div class="paigination w3-dark-gray w3-text-black">
-      					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('1')">Lord Inquisitors</a>
-     					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('2')">System Controllers</a>
-      					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('3')">Arbiters</a>
-      					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('4')">Zealots</a>
-      					<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('5')">Inquisitors</a>
-    				</div>
-  				</div>
-			</div>
+					<div class="w3-center w3-padding-32">
+    					<div class="paigination w3-dark-gray w3-text-black">
+      						<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('1')"><script>document.write(Rank_6);</script></a>
+     						<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('2')"><script>document.write(Rank_5);</script></a>
+      						<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('3')"><script>document.write(Rank_4);</script></a>
+      						<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('4')"><script>document.write(Rank_2);</script></a>
+      						<a class="w3-button w3-hover-black" href="javascript: onClick=showPage('5')"><script>document.write(Rank_1);</script></a>
+    					</div>
+  					</div>
+				</div>
 		</div>
 		
-		<div id="TopBanner"></div>
-		<div id="BottomBanner"></div>
-		
 		<div class="topBanner">
-			<img id="SovLogo" src="../assets/SovLogo.png"/>
+			<div id="Logo">
+				<img id="SovLogo" src="../assets/SovLogo.png"/>
+				<img id="SovGlow" src="../assets/SovLogo-Glow.gif"/>
+				<div id="SovAlert">
+					<div id="InnerBorder">
+						<p id="AlertText"><script>document.write(Alert_Description);</script></p>
+					</div>
+				</div>
+			</div>
 				<div id="LeftNavigation">
 					<ul>
-  						<li><a href="../pages/SovHome.html">Home</a></li>
+  						<li><a href="../pages/index.html">Home</a></li>
   						<li class="Communitydropdown">
-  							<a href="../pages/Forums.html">Community</a>
+  							<a href="#">Community</a>
   							<div class="Communitydropdown-content">
   								<a href="https://discord.gg/9aUPyFR">Discord</a>
   								<a onclick="copyToClipboard('TS')">TeamSpeak</a>
-  								<a href="https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ">Youtube</a>
   							</div>
   						</li>
-  						<li class="Streamersdropdown active">
-    						<a href="../pages/Streamers.html">Stream Tools</a>
-    						<div class="Streamersdropdown-content">
-    							<a href=""></a>
-    						</div>
-  						</li>
+						<li class="Streamersdropdown">
+ 							<a class="active" href="#">Stream Tools</a>
+ 							<div class="Streamersdropdown-content">
+ 								<a href="https://obsproject.com/">OBS Studio</a>
+ 								<a href="http://streamlabs.com/">StreamLabs</a>
+ 								<a href="https://www.ankhbot.com/">AnkhBot</a>
+ 							</div>
+ 						</li>
   						<li><a href="http://tomparkes1993.co.uk/EDHelpDesk/index.html">Help Desk</a></li>
   						<li><a href="../pages/Contact.html">Contact</a></li>
   						<li><a href="../pages/About.html">About</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
+  						<li><a href="../pages/Support.html">Support</a></li>
 					</ul> 
 				</div>
 				<div id="RightNavigation">
@@ -797,31 +448,25 @@
   						<li><a href="../pages/ScienceDivision.html">B.o.S.S.</a></li>
   						<li><a href="../pages/BGSDivision.html">B.G.S. Info</a></li>
   						<li><a href="../pages/HomeFleet.html">Home Fleet</a></li>
-  						<!--<li><a class="active" href=""/a></li>-->
 					</ul> 
 				</div>
 		</div>
 		
-		
-		<p id="TS" class="w3-hide">50.205.53.70</p>
-	
-		<div class="FooterBanner">
-			<div id="FooterButtons">
-				<ul>
-  					<li><image class="Youtube" src="../assets/Youtube.png" onclick="
-  	location.replace('https://www.youtube.com/channel/UCvNDpFqwKGkZDawc8xh_pZQ')"></image></li>
-  					<li><image class="TeamSpeak" src="../assets/teamspeak.png" onclick="copyToClipboard('TS')"></image></li>
-					<li><image class="Discord" src="../assets/discord.png" onclick="location.replace('https://discord.gg/9aUPyFR')"></image></li>
-  						<!--<li><a class="active" href=""/a></li>-->
-				</ul> 
-			</div>
+		<div id="FooterButtons">
+			<ul>
+  				<li><image class="TeamSpeak" src="../assets/TeamSpeak.png" onclick="copyToClipboard('TS')"></image></li>
+				<li><image class="Discord" src="../assets/Discord.png" onclick="location.replace('https://discord.gg/9aUPyFR')"></image></li>
+			</ul> 
 		</div>
 		
-	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
-	<script src="https://cdn.rawgit.com/robbiemu/Twitch-Channel-Status/master/twitch-channel-status.js" data-interval="120" data-clientid="ji36kztzgizwvlq7oob8r7krk2ac1b" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" ></script>
-	<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
-	
+		<p id="TS" class="w3-hide">50.205.53.70</p>
+		<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+		<script src="https://cdn.rawgit.com/robbiemu/Twitch-Channel-Status/master/twitch-channel-status.js" data-interval="120" data-clientid="ji36kztzgizwvlq7oob8r7krk2ac1b" data-online-image="../assets/Live_Icon.png" data-offline-image="../assets/Offline_Icon.png" ></script>
+		<script src="https://ttv-api.s3.amazonaws.com/twitch.min.js"></script>
 	
 	</div>
+	
+	<div id="BottomBanner"></div>
+
 	</body>
 </html>
