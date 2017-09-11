@@ -321,7 +321,7 @@ span {
     font-size: 110%;
 }
 
-.VideoFrame {
+.video-frame {
     height:450px;
     width:700px;
     left: 420px;
@@ -329,7 +329,7 @@ span {
     position:absolute;
 }
 
-#HomeVidFrame {
+#homeVidFrame {
     height: 100%;
     width: 100%;
     position:absolute;
